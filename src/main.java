@@ -10,9 +10,7 @@ public class main {
                     parserDir(String.valueOf((item)));
                 }
                 else{
-                    if(getFileExtension(item).equals("pdf")){
-                        System.out.println("PDF" + " " + item.getName());
-                    }
+                    if(getFileExtension(item).equals("pdf")) System.out.println("PDF" + " " + item.getName());
                     else if (getFileExtension(item).equals("xls") |
                             getFileExtension(item).equals("xlsx")) System.out.println("XLS" + " " + item.getName());
                 }
