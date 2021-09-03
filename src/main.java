@@ -8,15 +8,23 @@ public class main {
             for(File item : folder.listFiles()){
                 if(item.isDirectory()){
                     parserDir(String.valueOf((item)));
-                    System.out.println(item + "  \t folder");
-
                 }
                 else{
-                    System.out.println(item.getName() + "\t file");
-                    
+                    //System.out.println(getFileExtension(item) );
+
+                    String file = getFileExtension(item);
+                    System.out.println(file);
+
                 }
             }
         }
+    }
+
+    private static String getFileExtension(File file) {
+        String fileName = file.getName();
+        if(fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0)
+            return fileName.substring(fileName.lastIndexOf(".")+1);
+        else return "";
     }
 
     public static void main(String[] args) {
