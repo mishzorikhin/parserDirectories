@@ -1,4 +1,4 @@
-import java.io.File;
+importimport java.io.File;
 
 public class main {
 
@@ -10,11 +10,11 @@ public class main {
                     parserDir(String.valueOf((item)));
                 }
                 else{
-                    //System.out.println(getFileExtension(item) );
-
-                    String file = getFileExtension(item);
-                    System.out.println(file);
-
+                    if(getFileExtension(item).equals("pdf")){
+                        System.out.println("PDF" + " " + item.getName());
+                    }
+                    else if (getFileExtension(item).equals("xls") |
+                            getFileExtension(item).equals("xlsx")) System.out.println("XLS" + " " + item.getName());
                 }
             }
         }
