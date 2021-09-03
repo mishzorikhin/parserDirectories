@@ -27,6 +27,12 @@ public class main {
 
     public static void main(String[] args) {
 
-        parserDir("C:\\Users\\mishz\\IdeaProjects\\parserDirectories\\ПАО НКХП 2315014748");
+        //parserDir("C:\\Users\\mishz\\IdeaProjects\\parserDirectories\\ПАО НКХП 2315014748");
+        
+        PathBuilder path = new PathBuilder();
+        path.AddYear((short) 2021);
+        path.AddQr((short) 1);
+        path.pathByName("Бухгалтерская отчетность_форма 1");
+        
     }
 }
